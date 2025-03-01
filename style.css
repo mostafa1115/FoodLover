@@ -8,6 +8,7 @@
 }
  body {
     font-family: "Quicksand", sans-serif;
+    /* width: 100%; */
 }
 .container{
     
@@ -29,6 +30,7 @@ a{
 
  /* header */
   header{
+    width: 100%;
     height: 100vh;
     background: url(./img/home_bg.jpg) center center/cover no-repeat;
     position: relative;
@@ -217,7 +219,7 @@ a{
   #daytime .row {
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-top: 80px;
 
@@ -344,8 +346,12 @@ a{
 @media (max-width:600px){
     .navbar {
         flex-direction: column;
-        margin-bottom: -80px;
-    } .navbar .logo{
+        margin-bottom: -10px;
+        font-size: 15px;
+    } .navbar ul li a {
+        padding: 30px 10px;
+    }
+    .navbar .logo{
         margin-bottom: 20px;
     } header .content {
         text-align: center;
@@ -354,24 +360,66 @@ a{
     }  
      #about .title {
         margin-top: 50px;
+    }.title{
+        text-align: center;
+        margin: 100px 0 40px;
+    } .row-images div img {
+        width: 80px;
+        margin-bottom: 10px;
+    }.row-images div h2 {
+        font-size: 16px;
+    }.row-images div p {
+        font-size: 12px;
     }
     #about .title h2 {
         font-size: 25px;
-    } #about .container .about-content .about-image img{
-        width: 250px;
-        height: 400px;
+    }#about .container .about-content p {
+        font-size: 12px;
+        font-weight: 700;
+    }#about .container .about-content a {
+        padding: 15px 10px;
+        font-size: 12px;
+    } .offers-container .title-offers h2 {
+        font-size: 30px;
+    }.offers-container .title-offers p {
+        font-size: 15px;
+    }.row-images {
+       margin: 40px 100px;
+    }
+     #about .container .about-content .about-image img{
+        width: 100px;
+        height: 300px;
     } #menu .container .menu-items img {
         width: 80px;
         flex-shrink: 0;
     } #menu .container .menu-items{
         flex-direction: column;
-    } #daytime .row .daytime-icon h3{
+    }#daytime .row {
+        flex-wrap: wrap;
+        gap: 25px;
+        margin:  10px;
+    }
+     #daytime .row .daytime-icon h3{
+        margin: 10px 0 5px;
         font-size: 25px;
+        font-weight: 700;
     } #daytime .row .daytime-icon img {
         width: 80px;
     }#daytime .row .daytime-icon p {
         font-size: 12px;
-    } #contact .container {
+    } #gallery .gallery-image img {
+        width: 200px;
+        height: 200px;
+    }  #gallery h2 {
+        font-size: 30px;
+    }  #gallery {
+        background:url(./img/offer-background.jpg) center center/cover fixed;
+        padding: 5rem 5rem 6rem;
+    }
+    #contact {
+        padding: 8rem 5rem -10rem 16rem;
+      }
+     #contact .container {
         flex-direction: column;
     }.right  form{
         margin-left: 0;
@@ -379,4 +427,4 @@ a{
         margin-top: 30px;
         width: 80%;
       }
-}
+} 
